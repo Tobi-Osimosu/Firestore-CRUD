@@ -1,0 +1,24 @@
+<h1 class="display-4">Employee Register</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Full Name" formControlName="fullName" [(ngModel)]="empSvc.formData.fullName">
+        <!-- <div *ngIf="form.invalid" class="validation-error">This field is required</div> -->
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Position" formControlName="position" [(ngModel)]="empSvc.formData.position">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Employee Code" formControlName="empCode" [(ngModel)]="empSvc.formData.empCode">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Mobile" formControlName="mobile" [(ngModel)]="empSvc.formData.mobile">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-info" [disabled]="!form.valid">SUBMIT</button>
+    </div>
+    <div class="form-group">
+        <button *ngIf="empSvc.formData.id" type="button" class="btn btn-block btn-danger" (click)="onDelete()">DELETE</button>
+    </div>
+</form>

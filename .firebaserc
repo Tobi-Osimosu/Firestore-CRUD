@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firestore-cfbe4": {
+      "hosting": {
+        "Firestore-CRUD": [
+          "firestore-cfbe4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firestore-cfbe4"
+  }
+}
